@@ -35,7 +35,7 @@ export const userController = {
                 nombre, apellido, edad, email
         })
         const savedUser = await newUser.save()
-        res.staus(200).json({ success: true, message: "Se creo nuevo usuario", data: savedUser })
+        res.status(200).json({ success: true, message: "Se creo nuevo usuario", data: savedUser })
         } catch (error) {
             res.status(500).json({success: false, message: "Error en el servidor"})
         }

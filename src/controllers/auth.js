@@ -1,4 +1,4 @@
-import { hash, compare } from "bcrypt";
+import { hash, compare } from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import UserAdm from "../models/mongoDB/UserAdm.js";
 const saltRounds = 10
@@ -35,14 +35,4 @@ export const authController = {
             res.status(200).json({ success: true, message: 'Usuario autenticado', data: accessToken })
     },
 
-    //     
-    // async generateToken(payload){
-    //     const userAdmforToken = {
-    //         userAdmName: payload.fullName,
-    //         userAdmEmail: payload.email,
-    //         sub: payload.id
-    //     }
-
-    //     return jwt.sign(userAdmforToken, process.env.JWT_SECRET, { expiresIn: '1h' })
-    // }
 }
